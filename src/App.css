@@ -1,22 +1,27 @@
-.App {
-  text-align: center;
+.todo_list_container{
+  width:100%;
+  height:auto;
+  /* background: #f3f4fd; */
 }
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo_form_wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
+  padding-top: 150px;
+}
+.todo_result_wrapper {
+  max-width:600px;
+  margin:45px auto;
+  display: flex;
+  flex-wrap:wrap;
+  background: #fff;
+  /* border:1px solid #dfffff; */
+  justify-content: space-around;
+  padding: 30px 10px;
 }
 
-.App-link {
-  color: #09d3ac;
+@media screen and (max-width: 700px) {
+  .todo_form_wrapper {
+    padding-top: 30px;
+  }
 }

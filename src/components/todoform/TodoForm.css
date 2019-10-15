@@ -1,0 +1,51 @@
+.todo_form_container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.todo_form_btn {
+  position: relative;
+  background-color: #331E36;
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-left:-5px;
+  z-index: 1111;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 600px) {
+  .todo_form_container {
+    flex-direction: column;
+  }
+  .todo_form_btn {
+    margin: 0;
+    margin-top: 15px;
+    flex: 1;
+  }
+  .custom_input {
+    flex: 1;
+  }
+}
+.todo_form_btn:hover {
+  opacity: 0.8;
+}
+.custom_input {
+  padding: 8px 15px;
+  border: 1px solid #331E36;
+  border-radius: 4px;
+  position: relative;
+}
+.custom_input input[type="text"] {
+  color: #6a7989;
+  border: none;
+  padding: 8px 15px 8px 0;
+  background: transparent;
+}
+input[type="text"]:focus {
+  outline: none;
+}
