@@ -5,9 +5,13 @@ import { AppContext } from '../../context/AppContextProvider';
 const TodoList = () => {
   return (
     <AppContext.Consumer>
-      {({ todo, removeTodo }) => (
+      {({ todo, removeTodo, updateTodo }) => (
         todo && todo.map(item => (
-          <TodoItem key={item} title={item} removeTodo={removeTodo} />
+          <TodoItem
+            key={item}
+            title={item}
+            updateTodo={updateTodo}
+            removeTodo={removeTodo} />
         ))
       )
       }

@@ -4,6 +4,7 @@ export const AppContext = React.createContext({
   todo: [],
   addTodo: () => null,
   removeTodo: () => null,
+  updateTodo: () => null
 })
 
 class AppContextProvider extends Component {
@@ -38,12 +39,27 @@ class AppContextProvider extends Component {
     })
   }
 
+  updateTodo = (oldval, newval) => {
+    if (oldval !== newval) {
+      const todo = this.state.todo.map(val => {
+        if (val === oldval) {
+          return newval;
+        }
+        return val;
+      })
+
+      this.setState({ todo })
+    }
+  }
+
   render() {
     return (
       <AppContext.Provider value={{
         todo: this.state.todo,
         addTodo: this.addTodo,
-        removeTodo: this.removeTodo
+        removeTodo: this.removeTodo,
+        updateTodo: this.updateTodo
+
       }}>
         {this.props.children}
       </AppContext.Provider>
