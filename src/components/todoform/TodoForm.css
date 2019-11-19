@@ -31,9 +31,9 @@
     flex: 1;
   }
 }
-.todo_form_btn:hover {
+/* .todo_form_btn:hover {
   opacity: 0.8;
-}
+} */
 .custom_input {
   padding: 8px 15px;
   border: 1px solid #331E36;
@@ -48,4 +48,20 @@
 }
 input[type="text"]:focus {
   outline: none;
+}
+
+.font-awesome-icon_wrapper{
+  position: relative;
+}
+
+.font-awesome-icon_left_margin{
+  position: absolute;
+  transform: translateX(15px) translateY(-2px);
+  color:blue;
+  opacity: 0.5;
+  padding:3px;
+  border-radius:50%;
+  border:1px solid #dfdfdf;
+  box-shadow: 1px 2px 3px 1px rgba(0,0,0,0.277);
+  cursor: pointer;
 }
